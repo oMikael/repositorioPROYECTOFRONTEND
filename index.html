@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Macarena</title>
+	<!-- Bootstrap CSS -->
+	<link rel="icon" href="./images/macarena-icon.png">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/et-line-icons.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/iconmonstr-iconic-font.min.css" />
+	<link rel="stylesheet" href="css/lity.min.css" />
+	<link rel="stylesheet" href="css/animate.css" />
+	<link rel="stylesheet" href="css/owl.carousel.min.css" />
+	<link rel="stylesheet" href="css/owl.theme.default.min.css" />
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/responsive.css">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:100,200,300,400,500,600,700,800%7cPoppins:100,200,300,400,500,600,700,800"
+		rel="stylesheet">
+
+	<!-- cookie disclaimer -->
+	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+		<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+		<script>
+		window.addEventListener("load", function(){
+		var token = localStorage.getItem('token');
+		if (token) {
+			token = token.replace(/^"(.*)"$/, '$1'); // Remove quotes from token start/end.
+			$('.log-in').hide()
+		} else {
+			$('.log-out').hide()
+		}
+		window.cookieconsent.initialise({
+		"palette": {
+		"popup": {
+			"background": "#eb6c44",
+			"text": "#ffffff"
+		},
+		"button": {
+			"background": "#f5d948"
+		}
+		},
+		"position": "bottom-left"
+		})});
+		</script>
+	</head>
+
+<body>
+	<!-- ==================================================
+							load-wrapp
+      ================================================== -->
+	<div class="load-wrapp">
+		<div class="wrap">
+			<ul class="dots-box">
+				<li class="dot"><span></span></li>
+				<li class="dot"><span></span></li>
+				<li class="dot"><span></span></li>
+				<li class="dot"><span></span></li>
+				<li class="dot"><span></span></li>
+			</ul>
+		</div>
+	</div>
+	<!-- ==================================================
+							End load-wrapp
+      ================================================== -->
+
+	<!-- ==================================================
+							navbar
+      ================================================== -->
+	<nav class="navbar navbar-transparent navbar-expand-lg">
+		<div class="container">
+			<a class="navbar-brand" href="#">
+				<img src="images/macarena_logo.png" alt="logo">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar"
+				aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="fa fa-bars"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="main-navbar">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="" data-scroll-nav="1">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#" data-scroll-nav="2">Acrylics</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#" data-scroll-nav="3">Cards</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#" data-scroll-nav="4">Foil</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#" data-scroll-nav="5" >Marbled</a>
+					</li>
+					<li class="nav-item log-in">
+					  	<a class="nav-link flex-center bg-blue radius-5px transition-3" onclick="document.getElementById('id01').style.display='block'" style="width:auto;" >Ingresar</a> 
+					</li>
+					<li class="nav-item log-out">
+					  	<a id="logout_button" class="nav-link flex-center bg-blue radius-5px transition-3" style="width:auto;" >Logout</a> 
+					</li>
+					<li class="nav-item" >
+						<a id="cart_link" class=" nav-link" >
+							<span class="fa fa-shopping-bag fa-lg"></span>  
+						</a>
+				  </li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- ==================================================
+							End navbar 
+      ================================================== -->
+
+	<!-- ==================================================
+							welcome-agency
+	  ================================================== -->
+	<video autoplay loop playsinline muted class="video-container">
+		<source src="intro.mp4" type="video/mp4">
+	</video>
+
+	<section class="welcome-agency text-center" data-scroll-index="1">
+		<div class="overlay-bg-75 flex-center">
+			<div class="container" style="padding-top:5vh">
+
+				<div class="welcome-text">
+					<h1 class="mb-10px color-pink">Handcrafted gifts</h1>
+					<h2 style="color:#E34E96; font-weight: 400;" class="color-aaa">Tus deseos son arte</h3>
+						<a class="main-btn btn-1 btn-orange mt-10px before-gray"
+							href="https://www.youtube.com/watch?v=YyAZWjf4zUU&feature=youtu.be" data-lity><i class="fa fa-play"></i>
+							Nuestro video</a>
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<!-- ==================================================
+							End welcome-agency
+	  ================================================== -->
+	  
+	<!-- =====================================================
+								login 
+	========================================================= -->
+		<style>
+		/* Full-width input fields */
+		input[type=text], input[type=password] {
+		width: 100%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		display: inline-block;
+		border: 1px solid #ccc;
+		box-sizing: border-box;
+		}
+
+		/* Set a style for all buttons */
+		/*  */
+
+		button:hover {
+		opacity: 0.8;
+		}
+
+		/* Extra styles for the cancel button */
+		.cancelbtn {
+		width: auto;
+		padding: 10px 18px;
+		background-color: #f44336;
+		}
+
+		/* Center the image and position the close button */
+		.imgcontainer {
+		text-align: center;
+		margin: 24px 0 12px 0;
+		position: relative;
+		}
+
+		img.avatar {
+		width: 40%;
+		border-radius: 50%;
+		}
+
+		.container {
+		padding: 16px;
+		}
+
+		span.psw {
+		float: right;
+		padding-top: 16px;
+		}
+
+		/* The Modal (background) */
+		.modal {
+		display: none; /* Hidden by default */
+		position: fixed; /* Stay in place */
+		z-index: 1; /* Sit on top */
+		left: 0;
+		top: 0;
+		width: 100%; /* Full width */
+		height: 100%; /* Full height */
+		overflow: auto; /* Enable scroll if needed */
+		background-color: rgb(0,0,0); /* Fallback color */
+		background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+		padding-top: 60px;
+		}
+
+		/* Modal Content/Box */
+		.modal-content {
+		background-color: #fefefe;
+		margin: 10% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+		border: 1px solid #888;
+		width: 80%; /* Could be more or less, depending on screen size */
+		}
+
+		/* The Close Button (x) */
+		.close {
+		position: absolute;
+		right: 25px;
+		top: 0;
+		color: #000;
+		font-size: 35px;
+		font-weight: bold;
+		}
+
+		.close:hover,
+		.close:focus {
+		color: red;
+		cursor: pointer;
+		}
+
+		/* Add Zoom Animation */
+		.animate {
+		-webkit-animation: animatezoom 0.6s;
+		animation: animatezoom 0.6s
+		}
+
+		@-webkit-keyframes animatezoom {
+		from {-webkit-transform: scale(0)} 
+		to {-webkit-transform: scale(1)}
+		}
+		
+		@keyframes animatezoom {
+		from {transform: scale(0)} 
+		to {transform: scale(1)}
+		}
+
+		/* Change styles for span and cancel button on extra small screens */
+		@media screen and (max-width: 300px) {
+		span.psw {
+			display: block;
+			float: none;
+		}
+		.cancelbtn {
+			width: 100%;
+		}
+		}
+		</style>
+		</head>
+		<body>
+
+		<!-- <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button> -->
+		<!-- ========== Log in Form ============================== -->
+		<div id="id01" class="modal">
+		
+		<form id="login_form" class="modal-content animate">
+			<div class="imgcontainer">
+			<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+			<img src="./images/macarena_logo.png" alt="Avatar" class="avatar" style="width: 10%;">
+			</div>
+
+			<div class="container">
+			<label for="email"><b>Email</b></label>
+			<input type="text" id="email" placeholder="Enter email" name="email" required>
+
+			<label for="password"><b>Password</b></label>
+			<input type="password" id="password" placeholder="Enter Password" name="password" required>
+				
+			<button type="submit" class="bg-green">Login</button>
+			</div>
+
+			<div class="container" style="background-color:#f1f1f1">
+				<h6 style="color:#CA7D32;">Aún no tienes cuenta?</h6>
+			<button type="button" onclick="document.getElementById('id02').style.display='block'; document.getElementById('id01').style.display='none'" class="sign-up">Sign Up</button>
+			<!-- <span class="sign-up" a href="document.getElementById('id02').style.display='none'">Sign in</span> -->
+			</div>
+		</form>
+		</div>
+		<!-- ========= End Log in ====================================== -->
+
+		<!-- ========== Sign in Form ============================== -->
+		<div id="id02" class="modal">
+		
+			<form id="signup_form" class="modal-content animate">
+			<div class="imgcontainer">
+				<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+				<img src="./images/macarena_logo.png" alt="Avatar" class="avatar" style="width: 10%;">
+			</div>
+		
+			<div class="container">
+				<label for="name"><b>Nombre</b></label>
+				<input id="name"type="text" placeholder="introduzca su nombre" name="name" required>
+		
+				<label for="email"><b>Correo</b></label>
+				<input id="email" type="text" placeholder="introduzca su correo" name="email" required>
+		
+				<label for="age"><b>Edad</b></label>
+				<input id="age" type="text" placeholder="introduzca su edad" name="age" required>
+
+				<label for="password"><b>Contraseña</b></label>
+				<input id="password" type="password" placeholder="introduzca su contraseña" name="password" required>
+				
+				<button id="signup_button" type="submit" class="bg-green">Sign Up</button>
+			</div>
+		
+			<div class="container" style="background-color:#f1f1f1">
+				<button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+			</div>
+			</form>
+		</div>
+		<!-- ========= End Sign in ====================================== -->
+
+
+
+		<script>
+		// Get the modal
+		var modal = document.getElementById('id01');
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+		</script>
+
+		</body>
+		</html>
+	<!-- ==================================================
+							End Login
+      ================================================== -->	
+	<!-- ==================================================
+							Acrylics
+      ================================================== -->
+	<section class="process-area sec-padding" data-scroll-index="2">
+		<div class="container">
+			<span class="color-pink pt-5px pb-30px pl-15px pr-15px fs-50">Acrylics</span>
+			<div id="acrylicArticles" class="row mb-10px">
+				<!-- Loaded acrylics go here! -->
+			</div>
+		</div>
+	</section>
+	<!-- ==================================================
+									End Acrylics
+									
+			================================================== -->
+	<!-- ==================================================
+							Cards
+      ================================================== -->
+	<section class="about-area sec-padding" data-scroll-index="3">
+		<div class="container" style="margin-top: 20px">
+				<span class="color-pink pt-5px pb-30px pl-15px pr-15px fs-50">Cards</span>
+				<div id="cardArticles" class="row mb-50px">
+					<!-- Loaded cards go here! -->
+				</div>
+		</div>
+	</section>
+	<!-- ==================================================
+							End Cards
+	  ================================================== -->
+
+	<!-- ==================================================
+							Foil
+	================================================== -->
+	<section class="about-area sec-padding" data-scroll-index="4">
+		<div class="container" style="margin-top: 20px">
+				<span class="color-pink pt-5px pb-30px pl-15px pr-15px fs-50">Foil</span>
+				<div id="foilArticles" class="row mb-50px">
+					<!-- Foil articles go here! -->
+				</div>
+
+		</div>
+	</section>
+	<!-- ==================================================
+							End Foil
+		================================================== -->
+
+	<!-- ==================================================
+								Marbeled
+		================================================== -->
+	<section class="about-area sec-padding" data-scroll-index="5">
+		<div class="container" style="margin-top: 20px">
+				<span class="color-pink pt-5px pb-30px pl-15px pr-15px fs-50">Marbled</span>
+				<div id="marbledArticles" class="row mb-50px">
+					<!-- Loaded marbled go here! -->
+				</div>
+
+		</div>
+	</section>
+	<!-- ==================================================
+							End Cards
+		================================================== -->
+
+	<!-- ==================================================
+							get-started
+      ================================================== -->
+	<section class="get-started bg-pink sec-padding text-center p-relative">
+		<div class="container">
+			<div class="row mb-50px">
+				<div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 z-index-2">
+					<h3 class="color-fff mb-10px">¿Donde se encuentra localizada la tienda?</h3>
+					<p class="color-eee mb-30px">Actualmente no contamos con tienda física en un lugar determinado, pero puedes seguir nuestras redes sociales 
+						para estar al tanto de los eventos donde estaremos, como callejero.
+					</p>
+					<!----form class="p-relative">
+						 <input type="email" required class="radius-50px mb-10px pl-15px pt-7px pb-7px no-border w-100" placeholder="Ingresa tu correo ITESM">
+							<button class="bg-orange color-fff radius-50px pr-15px pl-15px pt-7px pb-7px no-border p-absolute">Enviar Correo</button>
+							<input type="text"  class="radius-50px mb-10px pl-15px pt-7px pb-7px no-border w-100" placeholder="Ingresa un pequeño mensaje">
+						  
+					  </form-->
+				</div>
+			</div>
+			<div class="patt-2 p-absolute left-0"></div>
+		</div>
+	</section>
+	<!-- ==================================================
+							End get-started
+      ================================================== -->
+
+	<!-- ==================================================
+							footer-area
+      ================================================== -->
+	<section class="footer-area sec-padding" data-scroll-index="6">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-sm-6">
+					<div class="mt-25px mb-25px">
+						<img src="images/macarena_logo.png" class="mb-20px" alt="img">
+						<p class="mb-20px">Tus deseos son arte</p>
+					</div>
+					
+				</div>
+
+				<div class="col-lg-4 col-sm-6">
+					<div class="mt-25px mb-25px">
+						<h4 class="mb-20px">Contacto</h4>
+						<p class="mb-20px">Comunicate con nosotros para más información</p>
+						<!-- <h6><i class="fa fa-map-marker mr-5px fs-15 color-blue bg-gray radius-50 address text-center"></i>
+							Tecnológico de Monterrey Campus MTY</h6> -->
+						<h6 class="mb-30px"><i
+								class="fa fa-envelope mr-5px fs-15 color-fff bg-green radius-50 address text-center"></i>
+							isamonag@gmail.com</h6>
+						<a href="https://www.facebook.com/macarena.arte/" target="_blank"
+							class="social color-fff color-fff-hvr bg-orange-hvr bg-green text-center radius-50px fs-15 d-inline-block"><i
+								class="fa fa-facebook"></i> </a>
+						
+						<a href="https://www.instagram.com/macarena_arte/" target="_blank"
+							class="social color-fff color-fff-hvr bg-orange-hvr bg-green text-center radius-50 fs-15 d-inline-block"><i
+								class="fa fa-instagram"></i> </a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ==================================================
+							End footer-area
+      ================================================== -->
+
+	<!-- ==================================================
+							copyright-area
+      ================================================== -->
+	<section class="bg-yellow sm-padding text-center">
+		<div class="container">
+			<h6 class="mb-0px" style="color:white">Macarena Arte 2019</h6>
+		</div>
+	</section>
+	<!-- ==================================================
+							End copyright-area
+      ================================================== -->
+
+	
+	<script type="text/javascript" src="js/lib/jquery.js" ></script>
+	<script type="text/javascript" src="ajax_handlers/js.js"></script>
+	<script type="text/javascript" src="ajax_handlers/library.js"></script>
+	<script type="text/javascript" src="ajax_handlers/signup.js"></script>
+	<script type="text/javascript" src="ajax_handlers/signin.js"></script>
+	<script type="text/javascript" src="ajax_handlers/signout.js"></script>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="js/lib/jquery.js" type="text/javascript"></script>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery-migrate-3.0.0.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.counterup.min.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/lity.min.js"></script>
+	<script src="js/scrollIt.min.js"></script>
+	<script src="js/validator.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/wow.min.js"></script>
+
+</body>
+
+</html>
