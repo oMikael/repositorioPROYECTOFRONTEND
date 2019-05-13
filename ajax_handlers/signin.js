@@ -6,8 +6,8 @@ if (token) {
 $('#login_form').submit(function(e) {
   e.preventDefault()
   // cargar email y password
-  let email = $("#email").val()
-  let password = $("#password").val()
+  let email = $("#email_signin").val()
+  let password = $("#password_signin").val()
 
   json_to_send = {
     "email": email,
